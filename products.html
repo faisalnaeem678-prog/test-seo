@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - FurniCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +966 50 123 4567</span>
+                        <span><i class="fas fa-envelope"></i> info@furnicraft.com</span>
+                    </div>
+                    <div class="language-switch">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">العربية</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h2>Furni<span>Craft</span></h2>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="index.html#categories" class="nav-link">Categories</a></li>
+                            <li><a href="products.html" class="nav-link active">Products</a></li>
+                            <li><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li><a href="store-locator.html" class="nav-link">Store Locator</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search furniture..." id="searchInput">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="nav-icons">
+                            <a href="account.html" class="nav-icon"><i class="fas fa-user"></i></a>
+                            <a href="#" class="nav-icon"><i class="fas fa-heart"></i></a>
+                            <a href="cart.html" class="nav-icon cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover our complete collection of premium furniture</p>
+        </div>
+    </section>
+
+    <!-- Filters and Products -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" value="living-room" class="category-filter">
+                                <span>Living Room</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="bedroom" class="category-filter">
+                                <span>Bedroom</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="dining-room" class="category-filter">
+                                <span>Dining Room</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="office" class="category-filter">
+                                <span>Office</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="2000" value="2000" class="price-slider">
+                            <div class="price-values">
+                                <span>$0</span>
+                                <span id="maxPrice">$2000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Brand</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" value="west-elm" class="brand-filter">
+                                <span>West Elm</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="pottery-barn" class="brand-filter">
+                                <span>Pottery Barn</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="crate-barrel" class="brand-filter">
+                                <span>Crate & Barrel</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="ikea" class="brand-filter">
+                                <span>IKEA</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="wayfair" class="brand-filter">
+                                <span>Wayfair</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Rating</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" value="5" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="4" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    & Up
+                                </span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="3" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    & Up
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary clear-filters">Clear All Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <div class="products-count">
+                            <span id="productsCount">6 products found</span>
+                        </div>
+                        <div class="sort-options">
+                            <select id="sortSelect" class="sort-select">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="name">Name A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here by JavaScript -->
+                    </div>
+
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be generated by JavaScript -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <h3>Furni<span>Craft</span></h3>
+                    </div>
+                    <p>Your trusted partner for premium furniture and home decor solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=living-room">Living Room</a></li>
+                        <li><a href="products.html?category=bedroom">Bedroom</a></li>
+                        <li><a href="products.html?category=dining-room">Dining Room</a></li>
+                        <li><a href="products.html?category=office">Office</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@furnicraft.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> King Fahd Road, Riyadh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FurniCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

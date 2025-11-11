@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - FurniCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +966 50 123 4567</span>
+                    <span><i class="fas fa-envelope"></i> info@furnicraft.com</span>
+                </div>
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">العربية</button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h2>Furni<span>Craft</span></h2>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="products.html" class="nav-link">Products</a></li>
+                            <li><a href="about.html" class="nav-link">About</a></li>
+                            <li><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li><a href="account.html" class="nav-link active">Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search furniture..." id="searchInput">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>My Account</h1>
+            <p>Manage your account, orders, and preferences</p>
+        </div>
+    </section>
+
+    <!-- Account Section -->
+    <section class="account-section section-padding">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Login/Register Forms -->
+                <div class="auth-container" id="authContainer">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Login</button>
+                        <button class="auth-tab" data-tab="register">Register</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="auth-form active" id="loginForm">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to your account to continue shopping</p>
+                        
+                        <form class="form" id="loginFormElement">
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="loginPassword" name="password" required>
+                                    <button type="button" class="password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="remember">
+                                    <span class="checkmark"></span>
+                                    Remember me
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-sign-in-alt"></i> Sign In
+                            </button>
+                            
+                            <div class="form-links">
+                                <a href="#" class="forgot-password">Forgot your password?</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="auth-form" id="registerForm">
+                        <h2>Create Account</h2>
+                        <p>Join FurniCraft and start your furniture journey</p>
+                        
+                        <form class="form" id="registerFormElement">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerEmail">Email Address</label>
+                                <input type="email" id="registerEmail" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+966 50 123 4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerPassword">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="registerPassword" name="password" required>
+                                    <button type="button" class="password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates and offers
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-user-plus"></i> Create Account
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Dashboard (shown after login) -->
+                <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+                    <div class="dashboard-sidebar">
+                        <div class="user-profile">
+                            <div class="profile-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="User Avatar" id="userAvatar">
+                            </div>
+                            <div class="profile-info">
+                                <h3 id="userName">Ahmed Al-Rashid</h3>
+                                <p id="userEmail">ahmed@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <nav class="dashboard-nav">
+                            <ul>
+                                <li><a href="#dashboard" class="nav-item active" data-section="dashboard">
+                                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                                </a></li>
+                                <li><a href="#orders" class="nav-item" data-section="orders">
+                                    <i class="fas fa-shopping-bag"></i> My Orders
+                                </a></li>
+                                <li><a href="#wishlist" class="nav-item" data-section="wishlist">
+                                    <i class="fas fa-heart"></i> Wishlist
+                                </a></li>
+                                <li><a href="#addresses" class="nav-item" data-section="addresses">
+                                    <i class="fas fa-map-marker-alt"></i> Addresses
+                                </a></li>
+                                <li><a href="#profile" class="nav-item" data-section="profile">
+                                    <i class="fas fa-user"></i> Profile
+                                </a></li>
+                                <li><a href="#settings" class="nav-item" data-section="settings">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a></li>
+                                <li><a href="#" class="nav-item" id="logoutBtn">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="dashboard-content">
+                        <!-- Dashboard Overview -->
+                        <div class="dashboard-section active" id="dashboardSection">
+                            <h2>Dashboard Overview</h2>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3>5</h3>
+                                        <p>Total Orders</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3>12</h3>
+                                        <p>Wishlist Items</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3>4.8</h3>
+                                        <p>Average Rating</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3>2,450 SAR</h3>
+                                        <p>Total Spent</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-orders">
+                                <h3>Recent Orders</h3>
+                                <div class="orders-list">
+                                    <div class="order-item">
+                                        <div class="order-info">
+                                            <h4>Order #12345</h4>
+                                            <p>Modern Sectional Sofa</p>
+                                            <span class="order-date">Dec 10, 2024</span>
+                                        </div>
+                                        <div class="order-status">
+                                            <span class="status delivered">Delivered</span>
+                                        </div>
+                                        <div class="order-actions">
+                                            <button class="btn btn-outline">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other sections would be implemented similarly -->
+                        <div class="dashboard-section" id="ordersSection">
+                            <h2>My Orders</h2>
+                            <p>Order management section would be implemented here.</p>
+                        </div>
+
+                        <div class="dashboard-section" id="wishlistSection">
+                            <h2>My Wishlist</h2>
+                            <p>Wishlist management section would be implemented here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-us">
+                    <h3>Furni<span>Craft</span></h3>
+                    <p>Your one-stop shop for premium home and office furniture. We blend quality, comfort, and style.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 King Fahd Rd, Riyadh, KSA</p>
+                    <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@furnicraft.com</p>
+                    <p><i class="fas fa-clock"></i> Sat - Thu: 9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FurniCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>

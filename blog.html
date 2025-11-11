@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - FurniCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +966 50 123 4567</span>
+                    <span><i class="fas fa-envelope"></i> info@furnicraft.com</span>
+                </div>
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">العربية</button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h2>Furni<span>Craft</span></h2>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="products.html" class="nav-link">Products</a></li>
+                            <li><a href="about.html" class="nav-link">About</a></li>
+                            <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            <li><a href="account.html" class="nav-link">Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search furniture..." id="searchInput">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>FurniCraft Blog</h1>
+            <p>Inspiration, tips, and trends for your home</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section section-padding">
+        <div class="container">
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <!-- Featured Article -->
+                    <article class="featured-article">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=400&fit=crop" alt="Modern Living Room Design">
+                            <div class="article-category">Design Tips</div>
+                        </div>
+                        <div class="article-content">
+                            <h2>10 Modern Living Room Design Ideas for 2024</h2>
+                            <p class="article-excerpt">Transform your living space with these cutting-edge design trends that combine comfort, style, and functionality. From minimalist aesthetics to bold color statements, discover how to create a living room that reflects your personality.</p>
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Sarah Johnson</span>
+                                <span class="date"><i class="fas fa-calendar"></i> December 15, 2024</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Grid -->
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=250&fit=crop" alt="Bedroom Design">
+                                <div class="card-category">Bedroom</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Creating the Perfect Bedroom Sanctuary</h3>
+                                <p>Learn how to design a bedroom that promotes relaxation and restful sleep with our expert tips and recommendations.</p>
+                                <div class="card-meta">
+                                    <span class="author">Ahmed Al-Rashid</span>
+                                    <span class="date">Dec 12, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=250&fit=crop" alt="Dining Room Setup">
+                                <div class="card-category">Dining</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Dining Room Setup: From Small to Spacious</h3>
+                                <p>Maximize your dining space regardless of size with these clever furniture arrangements and design tricks.</p>
+                                <div class="card-meta">
+                                    <span class="author">Mohammed Al-Zahra</span>
+                                    <span class="date">Dec 10, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop" alt="Office Furniture">
+                                <div class="card-category">Office</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Home Office Essentials for Productivity</h3>
+                                <p>Set up a productive home office with the right furniture and accessories that boost your work efficiency.</p>
+                                <div class="card-meta">
+                                    <span class="author">Sarah Johnson</span>
+                                    <span class="date">Dec 8, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=250&fit=crop" alt="Storage Solutions">
+                                <div class="card-category">Storage</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Smart Storage Solutions for Every Room</h3>
+                                <p>Discover innovative storage ideas that help you organize your space while maintaining a clean, clutter-free look.</p>
+                                <div class="card-meta">
+                                    <span class="author">Ahmed Al-Rashid</span>
+                                    <span class="date">Dec 5, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=250&fit=crop" alt="Color Schemes">
+                                <div class="card-category">Color</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>2024 Color Trends for Home Interiors</h3>
+                                <p>Stay ahead of the curve with the latest color palettes that will dominate interior design in 2024.</p>
+                                <div class="card-meta">
+                                    <span class="author">Sarah Johnson</span>
+                                    <span class="date">Dec 3, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=250&fit=crop" alt="Furniture Care">
+                                <div class="card-category">Care</div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Furniture Care Tips for Longevity</h3>
+                                <p>Keep your furniture looking new for years with these simple maintenance tips and care instructions.</p>
+                                <div class="card-meta">
+                                    <span class="author">Mohammed Al-Zahra</span>
+                                    <span class="date">Dec 1, 2024</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn prev" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="pagination-numbers">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <span class="pagination-dots">...</span>
+                            <button class="pagination-btn">10</button>
+                        </div>
+                        <button class="pagination-btn next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Search Articles</h3>
+                        <div class="search-widget">
+                            <input type="text" placeholder="Search blog posts...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Design Tips <span>(12)</span></a></li>
+                            <li><a href="#">Bedroom <span>(8)</span></a></li>
+                            <li><a href="#">Living Room <span>(15)</span></a></li>
+                            <li><a href="#">Dining Room <span>(6)</span></a></li>
+                            <li><a href="#">Office <span>(9)</span></a></li>
+                            <li><a href="#">Storage <span>(7)</span></a></li>
+                            <li><a href="#">Color <span>(5)</span></a></li>
+                            <li><a href="#">Care <span>(4)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <div class="recent-posts">
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=80&h=60&fit=crop" alt="Recent Post">
+                                <div class="post-info">
+                                    <h4>Modern Living Room Ideas</h4>
+                                    <span>Dec 15, 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=80&h=60&fit=crop" alt="Recent Post">
+                                <div class="post-info">
+                                    <h4>Perfect Bedroom Setup</h4>
+                                    <span>Dec 12, 2024</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=80&h=60&fit=crop" alt="Recent Post">
+                                <div class="post-info">
+                                    <h4>Dining Room Arrangements</h4>
+                                    <span>Dec 10, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to get the latest design tips and furniture updates.</p>
+                        <form class="newsletter-widget">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-us">
+                    <h3>Furni<span>Craft</span></h3>
+                    <p>Your one-stop shop for premium home and office furniture. We blend quality, comfort, and style.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 King Fahd Rd, Riyadh, KSA</p>
+                    <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@furnicraft.com</p>
+                    <p><i class="fas fa-clock"></i> Sat - Thu: 9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FurniCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

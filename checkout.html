@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FurniCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +966 50 123 4567</span>
+                        <span><i class="fas fa-envelope"></i> info@furnicraft.com</span>
+                    </div>
+                    <div class="language-switch">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">العربية</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h2>Furni<span>Craft</span></h2>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="index.html#categories" class="nav-link">Categories</a></li>
+                            <li><a href="products.html" class="nav-link">Products</a></li>
+                            <li><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li><a href="store-locator.html" class="nav-link">Store Locator</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search furniture..." id="searchInput">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="nav-icons">
+                            <a href="account.html" class="nav-icon"><i class="fas fa-user"></i></a>
+                            <a href="#" class="nav-icon"><i class="fas fa-heart"></i></a>
+                            <a href="cart.html" class="nav-icon cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Progress -->
+    <section class="checkout-progress">
+        <div class="container">
+            <div class="progress-steps">
+                    <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Review</div>
+                    </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Complete</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <form id="checkoutForm">
+                    <!-- Step 1: Shipping Information -->
+                        <div class="checkout-step active" id="step1">
+                            <h2>Shipping Information</h2>
+                                <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code *</label>
+                                    <input type="text" id="postalCode" name="postalCode" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="AE">United Arab Emirates</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="OM">Oman</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="saveAddress">
+                                    <span class="checkmark"></span>
+                                    Save this address for future orders
+                                    </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Payment Information -->
+                        <div class="checkout-step" id="step2">
+                            <h2>Payment Information</h2>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                    <label for="creditCard">
+                                            <i class="fas fa-credit-card"></i>
+                                        Credit Card
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                                    <label for="bankTransfer">
+                                            <i class="fas fa-university"></i>
+                                        Bank Transfer
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
+                                    <label for="cashOnDelivery">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        Cash on Delivery
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="credit-card-form" id="creditCardForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card *</label>
+                                    <input type="text" id="cardName" name="cardName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Review Order -->
+                        <div class="checkout-step" id="step3">
+                            <h2>Review Your Order</h2>
+                            <div class="order-review">
+                                <div class="order-items" id="orderItems">
+                                    <!-- Order items will be loaded here -->
+                                </div>
+                                <div class="order-summary">
+                                    <div class="summary-row">
+                                        <span>Subtotal</span>
+                                        <span id="orderSubtotal">$0.00</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Shipping</span>
+                                        <span id="orderShipping">$0.00</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Tax</span>
+                                        <span id="orderTax">$0.00</span>
+                                    </div>
+                                    <div class="summary-row total">
+                                        <span>Total</span>
+                                        <span id="orderTotal">$0.00</span>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Step 4: Order Complete -->
+                        <div class="checkout-step" id="step4">
+                            <div class="order-complete">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h2>Order Placed Successfully!</h2>
+                                <p>Thank you for your order. We'll send you a confirmation email shortly.</p>
+                                <div class="order-details">
+                                    <p><strong>Order Number:</strong> #FC-2024-001</p>
+                                    <p><strong>Estimated Delivery:</strong> 3-5 business days</p>
+                                </div>
+                                <div class="order-actions">
+                                    <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                                    <a href="account.html" class="btn btn-outline">View Order History</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="checkout-navigation">
+                            <button type="button" class="btn btn-outline" id="prevBtn" style="display: none;">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-primary" id="placeOrderBtn" style="display: none;">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="order-summary-sidebar">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-items" id="summaryItems">
+                            <!-- Summary items will be loaded here -->
+                        </div>
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="summarySubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span id="summaryShipping">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span id="summaryTax">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="summaryTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <h3>Furni<span>Craft</span></h3>
+                    </div>
+                    <p>Your trusted partner for premium furniture and home decor solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=living-room">Living Room</a></li>
+                        <li><a href="products.html?category=bedroom">Bedroom</a></li>
+                        <li><a href="products.html?category=dining-room">Dining Room</a></li>
+                        <li><a href="products.html?category=office">Office</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +966 50 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@furnicraft.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> King Fahd Road, Riyadh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FurniCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
