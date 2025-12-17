@@ -72,6 +72,38 @@
     <!-- Apple Touch Icon for iOS devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
+    <!--Schema tag-->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Products",
+  "url": "https://furnicraft.vercel.app/products.html"
+}
+</script>
+
+<!--BroadcrumbList schema-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://furnicraft.vercel.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://furnicraft.vercel.app/products.html"
+    }
+  ]
+}
+</script>
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TW19EBEJQE"></script>
 <script>
