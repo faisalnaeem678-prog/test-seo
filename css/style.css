@@ -101,7 +101,7 @@ body {
     align-items: center;
 }
 
-.logo h2 {
+.logo h1 {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary-color);
@@ -2694,11 +2694,13 @@ textarea:focus {
     background: var(--border-color);
     outline: none;
     -webkit-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .price-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
     appearance: none;
+    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
