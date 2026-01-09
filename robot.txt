@@ -6,3 +6,5 @@ Disallow: /_next/
 Disallow: /api/
 
 Sitemap: https://furnicraft.vercel.app/sitemap.xml
+
+
