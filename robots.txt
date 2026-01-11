@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block unnecessary system or build files (if any)
-Disallow: /_next/
-Disallow: /api/
-
 Sitemap: https://furnicraft.vercel.app/sitemap.xml
-
-
