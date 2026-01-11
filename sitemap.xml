@@ -31,4 +31,9 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://furnicraft.vercel.app/index.html#categories</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
